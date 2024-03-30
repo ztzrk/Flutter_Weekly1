@@ -5,7 +5,10 @@ import 'package:weekly1/color.dart';
 import 'package:weekly1/welcome_page.dart';
 
 class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _SplashPageState createState() => _SplashPageState();
 }
 
