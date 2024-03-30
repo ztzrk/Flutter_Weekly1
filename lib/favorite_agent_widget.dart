@@ -14,6 +14,7 @@ class FavoriteAgentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           'Your Favorite',
@@ -46,29 +47,21 @@ class FavoriteAgentWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Agent Name : ${favoriteAgent.agent!.substring(0, 1).toUpperCase() + favoriteAgent.agent!.substring(1)}',
-                    style: MyTextStyle.smallText,
-                  ),
-                  Text(
-                    'Username : ${favoriteAgent.name}',
-                    style: MyTextStyle.smallText,
-                  ),
-                  Text(
-                    'Email : ${favoriteAgent.email}',
-                    style: MyTextStyle.smallText,
-                  ),
-                  Text(
-                    'Description : ${favoriteAgent.description}',
+                    'Agent Name: ${favoriteAgent.agent!.substring(0, 1).toUpperCase() + favoriteAgent.agent!.substring(1)}\n'
+                    'Username: ${favoriteAgent.name}\n'
+                    'Email: ${favoriteAgent.email}\n'
+                    'Description: \n'
+                    '${favoriteAgent.description}',
                     style: MyTextStyle.smallText,
                     softWrap: true,
-                  ),
+                  )
                 ],
               ),
             )
           ],
         ),
         const SizedBox(
-          height: 16,
+          height: 24,
         ),
       ],
     );
